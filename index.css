@@ -1,0 +1,205 @@
+
+* {
+    transition: all ease 1s;
+}   
+
+body{
+    background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png');
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 27pc);
+    justify-content: center;  
+}
+.nav{
+    background-color: #232323;
+    margin-bottom: 1pc;
+    justify-content: space-between;
+    padding: 0 1pc;
+    height: 5pc;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.nav ul{
+    list-style: none;
+}
+.nav ul li a{
+    color: white !important;
+    text-decoration: none !important;
+}
+.card{
+    width: 100%;
+    background-color: #232323;
+    color: white;
+}
+.number{
+    position: relative;
+    height: 14pc;
+    width: 100%;
+    background: white;
+    color: #616161;
+    font-family: fantasy;
+    opacity: 0.09;  
+    text-align: center;
+    font-size: 6pc;
+   
+}
+.imagen{
+    width: 13pc;
+    position: absolute;
+    top: 40px;
+    left: 16%;
+}
+.card:hover {
+    background-color: #616161;
+}
+.card:hover .number{
+    opacity: 1;
+    font-size: 8pc;
+}
+
+.card:hover .imagen{
+    width: 16pc;
+    top: -9px;
+    left: 8%;
+}
+
+.containerInfo{
+    padding: 0 1pc;
+    font-family: monospace;
+    font-size: 1pc;
+}
+
+.containerInfo h5{
+    display: flex;
+    justify-content: space-between;
+}
+
+.centrar{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 2pc;
+    width: 155rem;
+}
+
+.border{
+    padding: 3px;
+    margin: 0;
+    border-radius: 6px;
+}
+.borderRa{
+    border-radius: 10px;
+}
+.more{
+    padding: 0 1pc;
+    font-family: fantasy;
+    color: white;
+    align-items: center;
+    gap: 7px;
+}
+.more div{
+    width: 2pc;
+}
+.more  img{
+    width: 2pc;
+}
+.more:hover   img{
+    rotate: 1deg;
+    animation: rotate 0.1s linear;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container {
+    display: flex;
+    width: 91%;
+    /* height: 70vh; */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 0 31pc;
+  }
+  
+  .slider-hijos {
+    flex: 0 0 115%;
+    width: 100%;
+    object-fit: cover;
+    margin: 1pc;
+  
+    /* Vamos a añadir esto 👇 */
+    scroll-snap-align: center;
+  }
+
+  .boton_ver_mas{
+    background-color: #232323;
+    color: aliceblue;
+    padding: 0.6rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 0.6rem;
+    font-family: sans-serif;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+
+  .slider-container::-webkit-scrollbar{
+    height: 1pc;
+  }
+  .slider-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #232323;
+  }
+.anuncio{
+    /* border: 1px solid red; */
+    width: 15pc;
+    text-align: center;
+    font-family: fantasy;
+    color: white;
+}
+@media screen and (max-width: 950px) {
+    .container{
+        grid-template-columns: repeat(2, 20pc);
+    }
+}
+
+@media screen and (max-width: 1427px) {
+    .container{
+        grid-template-columns: repeat(2, 27rem);
+    }
+}
+
+@media screen and (max-width: 971px) {
+    .container{
+        grid-template-columns: repeat(2, 20pc);
+    }
+    .slider-container{
+        padding: 0px 4pc;
+    }
+}
+
+@media screen and (max-width: 729px) {
+    .container{
+        grid-template-columns: repeat(1, 100%);
+        padding: 0rem 3rem;
+    }
+}
+
+@media screen and (max-width: 729px) {
+    .container{
+        grid-template-columns: repeat(1, 100%);
+        padding: 0rem 2rem;
+    }
+}
